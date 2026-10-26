@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: FastEMRIWaveforms
-  version: "2.1.0"
+  version: "2.2.1"
   build: 0
   RECIPE_DIR: ${{ env.get("RECIPE_DIR", default=".") }}
   cuda_major: ${{ env.get("cuda_compiler_version", default="0.0") | split(".") | first | int }}
@@ -16,7 +16,7 @@ recipe:
 
 source:
   url: https://github.com/BlackHolePerturbationToolkit/FastEMRIWaveforms/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: afe4fff975e64c38f5866a9d6a186fe68fad260087e6634a1d173082fd6ad14d
+  sha256: 47fec648cf45a7dceb80a48e316fa7f11cf58470f4a6029ffed75495b50f06ae
   patches:
     - patches/01_few2.0_march.patch
     - patches/02_few_display_cmake_options.patch
